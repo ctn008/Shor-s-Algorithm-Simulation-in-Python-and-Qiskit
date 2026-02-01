@@ -35,7 +35,9 @@ The two quantum circuits and respective measured outcomes on IBM-Q quantum compu
 
 ### a) Quantum circuit implementation for Shor's period finding with N=15, a = 7, using 7 qubits
 <img width="1374" height="427" alt="image" src="https://github.com/user-attachments/assets/f8b136b2-394c-4358-9ad2-a89f9d5374e9" />
-a) Quantum circuit implementation for Shor's period finding with N=15, a = 7, using 7 qubits
+<div align="center">
+  <img width="919" height="660" alt="image" src="https://github.com/user-attachments/assets/004c270d-0bf0-46e9-acc5-909f2b0bf4b4" />
+</div>
 
 ### b) Quantum circuit implementation for Shor's period finding with N=15, a = 4, using 5 qubits
 <div align="center">
