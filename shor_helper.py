@@ -49,16 +49,16 @@ def plot_marginal_quantum_state(state_vector, n_control, n_target, label="Quantu
     # Plot Control Register Marginals
     # Setting edgecolor same as color removes the dark outline effect
     ax1.bar(range(dim_control), marginal_control, color=c_color, edgecolor=c_color)
-    ax1.set_title(f"Control Register (n={n_control} qubits)")
+    ax1.set_title(f"Control Register ({n_control} qubits)")
     ax1.set_xlabel("State Value (x)")
-    ax1.set_ylabel("Probability")
+    ax1.set_ylabel("Marginal Probability")
     ax1.grid(axis='y', linestyle='--', alpha=0.7)
     
     # Plot Target Register Marginals
     ax2.bar(range(dim_target), marginal_target, color=t_color, edgecolor=t_color)
-    ax2.set_title(f"Target Register (n={n_target} qubits)")
-    ax2.set_xlabel("State Value (f(x))")
-    ax2.set_ylabel("Probability")
+    ax2.set_title(f"Target Register ({n_target} qubits)")
+    ax2.set_xlabel("State Value (y = f(x))")
+    ax2.set_ylabel("Marginal Probability")
     ax2.grid(axis='y', linestyle='--', alpha=0.7)
     
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])

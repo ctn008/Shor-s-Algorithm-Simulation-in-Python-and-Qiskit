@@ -88,7 +88,7 @@ def shor_algorithm(N, a, n_target, n_control, plot):
     print("\nStep 1b: State vector after Hadarmard")
     print_state_vector(state, n_control, n_target, threshold=0.001, top_k=20)
     if plot:
-        plot_marginal_quantum_state(state, n_control, n_target, "Step 1: State vector after initialization")    
+        plot_marginal_quantum_state(state, n_control, n_target, label= f"Step 1: State vector after initialization (N={N}, a={a})")    
 
     # Projectors
     P0 = np.array([[1, 0], [0, 0]])
@@ -110,7 +110,7 @@ def shor_algorithm(N, a, n_target, n_control, plot):
     print("\nStep 2: State vector after applying Oracle Uf")
     print_state_vector(state, n_control, n_target, threshold=0.001, top_k=20)
     if plot:
-        plot_marginal_quantum_state(state, n_control, n_target, "Step 2: State vector after applying Oracle Uf")    
+        plot_marginal_quantum_state(state, n_control, n_target, label=f"Step 2: State vector after applying Oracle Uf (N={N}, a={a})")    
     
     # Step 3: Inverse QFT on Control
     iqft_mat = iqft(n_control)
@@ -120,7 +120,7 @@ def shor_algorithm(N, a, n_target, n_control, plot):
     print("\nStep 3: State vector after applying iQFT")
     print_state_vector(state, n_control, n_target, threshold=0.001, top_k=20)
     if plot:
-        plot_marginal_quantum_state(state, n_control, n_target, "Step 3: State vector after applying iQFT")    
+        plot_marginal_quantum_state(state, n_control, n_target, label=f"Step 3: State vector after applying iQFT (N={N}, a={a})")    
 
     # Step 4: Measure target register 
     y_measured, y_prob = measure_target(state, n_control, n_target)
@@ -128,7 +128,7 @@ def shor_algorithm(N, a, n_target, n_control, plot):
     print(f"Measured target register: |{format(y_measured, f'0{n_target}b')}>  (probability was {y_prob:.4f})")
     print_state_vector(state, n_control, n_target, threshold=0.001, top_k=20)
     if plot:
-        plot_marginal_quantum_state(state, n_control, n_target, "Step 4: State vector after measuring target register")    
+        plot_marginal_quantum_state(state, n_control, n_target, label= f"Step 4: State vector after measuring target register (N={N}, a={a}")    
 
     # Step 5: Measure control register
     measured_state = np.random.choice(1 << (n_control+n_target), p=np.abs(state)**2)
