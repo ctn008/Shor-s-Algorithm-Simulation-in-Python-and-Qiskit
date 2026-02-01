@@ -39,5 +39,6 @@ a) Quantum circuit implementation for Shor's period finding with N=15, a = 7, us
 
 ### b) Quantum circuit implementation for Shor's period finding with N=15, a = 4, using 5 qubits
 <img width="1390" height="484" alt="image" src="https://github.com/user-attachments/assets/39584d0d-7c04-421c-85a2-9037de15a0e8" />
-<img width="973" height="677" alt="image" src="https://github.com/user-attachments/assets/8a1a4fdc-280b-4755-b2b0-c8747becd022" />
+<img width="625" height="466" alt="image" src="https://github.com/user-attachments/assets/c9b928f9-4186-4952-984c-57d0071f7fc1" />
+
 
