@@ -25,7 +25,15 @@ Plot example:
 
 Both programs use the shor_helper.py for printing and ploting the probability distribution.
 
-## 2. Qiskit code  
-There are two Python programs 
-- shor_matrix_mult.py
-- shor_in_place_mult.py
+## 2. Qiskit code for IBM-Q demonstration  
+The qiskit codes consist of 2 files below, to run for two quantum circuit implementation scenarios of using 7 qubits and 5 qubits respectively:
+- ibm_q_shor_N15_a7_7q_qiskit.py
+- ibm_q_shor_N15_a7_5q_qiskit.py
+- ibm_q_shor_N15_a7_7q_qiskit.py
+
+
+<img width="1374" height="427" alt="image" src="https://github.com/user-attachments/assets/f8b136b2-394c-4358-9ad2-a89f9d5374e9" />
+Quantum circuit implementation for Shor's period finding with N=15, a = 7, using 7 qubits
+
+<img width="1390" height="484" alt="image" src="https://github.com/user-attachments/assets/39584d0d-7c04-421c-85a2-9037de15a0e8" />
+Quantum circuit implementation for Shor's period finding with N=15, a = 4, using 5 qubits
