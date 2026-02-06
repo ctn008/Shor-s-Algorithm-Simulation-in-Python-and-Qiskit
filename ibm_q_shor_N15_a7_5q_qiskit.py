@@ -40,7 +40,7 @@ qc.measure(x[0], c[0])
 qc.measure(x[1], c[1])
 
 # 3. Choose Backend and Transpile
-# We use ibm_fez as requested previously; ensure you have access to it
+# ibm_fez is selected; ensure you have access to it or modify accordingly
 backend = service.backend("ibm_fez") 
 tqc = transpile(qc, backend=backend, optimization_level=3)
 
@@ -51,12 +51,13 @@ job = sampler.run([tqc], shots=1024)
 print(f"Job ID: {job.job_id()}")
 print("Status: Job is in the queue. Please wait...")
 
-# 5. Fetch and Plot Results
+# Process only the x-register bits
 result = job.result()
-counts = result[0].data.c.get_counts()
+x_counts = result[0].data.c.get_counts()
 
-print("Counts:", counts)
-plot_histogram(counts, title=f"1024 Shots on {backend.name}")
+# Final Visualization
+print("Final X-Register Counts:", x_counts)
+plot_histogram(x_counts, title=f"Shor's N=15, a=4 (x-register) on {backend.name}")
 plt.show()
 qc.draw("mpl")
 plt.show()

@@ -15,11 +15,9 @@ x = QuantumRegister(3, 'x')
 c = ClassicalRegister(7, 'c')
 qc = QuantumCircuit(y, x, c)
 
-# UPDATE 1: INITIALIZE TARGET REGISTER TO |1>
 # Necessary so that modular multiplication (7^x * y) has a base to work from.
 qc.x(y[0])
 
-# UPDATE 2: PUT CONTROL REGISTER INTO SUPERPOSITION
 # This allows the circuit to calculate all powers of 7 mod 15 simultaneously.
 qc.h(x)
 qc.barrier()
