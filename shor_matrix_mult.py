@@ -1,3 +1,8 @@
+# Author: Trung Nguyen
+# Affiliation: MSQT Student, San Jose State University
+# Contact: trung.nguyen03@sjsu.edu
+# Date: February 2026
+
 """
 The code implements Shor algorithm by direct matrix multiplication.
 """
