@@ -1,3 +1,8 @@
+# Author: Trung Nguyen
+# Affiliation: MSQT Student, San Jose State University
+# Contact: trung.nguyen03@sjsu.edu
+# Date: February 2026
+
 import numpy as np
 import matplotlib.pyplot as plt
 from fractions import Fraction
