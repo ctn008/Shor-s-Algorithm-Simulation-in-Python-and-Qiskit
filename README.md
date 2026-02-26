@@ -7,10 +7,10 @@ There are two Python programs
 - shor_in_place_mult.py
 
 ### 1.1. shor_matrix_mult.py
-In this code, the quantum circuit is represented by its state vector (consisting of control register and target register). The evolution of the quantum circuit statevector will be performed by full matrix multiplication. The controlled U operator C-Ua shall be constructed as a full matrix and to be applied repeatedly to the state vector (equivalent to full Uf applied to the state vector). Similarly the IQFT shall be multiplied with identity matrix to convert to thw full matrix, before being applied to the state vector.
+In this code, the quantum circuit is represented by its state vector (consisting of control register and target register). The evolution of the quantum circuit statevector will be performed by full matrix multiplication. The controlled U operator C-Ua shall be constructed as a full matrix and to be applied repeatedly to the state vector (equivalent to full Uf applied to the state vector). Similarly the IQFT shall be multiplied with identity matrix to convert to the full matrix, before being applied to the state vector.
 
-The benefit of this code is that is follow strictly the mathematical operations being applied to the state vector, so that it is easy for the learners to visuallize and track the progress step by step. The downside of it is that the matrix multiplication in Python runs slowly and requires large memory allocation. Therefore it is feasible for N=15. When increasing N=21, with n=5 qubit for the second register and 10 qubits for the first register, the state vector is 15 qubit, and the full matrix size 15^2 x 15^2 is huge, making the progam unable to run on personal computer.
-This code is useful for N=15 only. The parameters N, a can be changed manually in the code as needed.
+The benefit of this code is that it follows strictly the mathematical operations being applied to the state vector, so that it is easy for the learners to visuallize and track the progress step by step. The downside of it is that the matrix multiplication in Python runs slowly and requires large memory allocation. Therefore it is feasible for simulation of 12 qubits (typical for N=15). When increasing N=21, with n=5 qubits, 2n=10 qubits for the second register and first registers, the state vector is 15 qubits; the full matrix size 15^2 x 15^2 is huge, making the progam unable to run on personal computer.
+This code is useful for total 12 qubits only (control + target), and can be used to simulate N=15, or N=21 with reduced qubits (for example n_target = 5, n_control = 7). The parameters (N, a, n_t, n_c) can be changed manually in the code as needed.
 
 Plot example:
 <img width="1392" height="479" alt="image" src="https://github.com/user-attachments/assets/84fac7bc-f9be-418c-82d0-dd092e6a4b89" />
@@ -20,10 +20,12 @@ Optimized for speed by:
 - Use 2-dimentional numpy array (state_2d variable) to efficiently manipulate the state vector
 - Use the built-in ifft function (which is equivalent for IQFT) 
 
+This optimized code can efficiently simulate larger values of N, such as N = 35, 51, 85.
+
 Plot example:
 <img width="1390" height="495" alt="image" src="https://github.com/user-attachments/assets/32da0b6a-f917-485c-8c43-46435b51835e" />
 
-Both programs use the shor_helper.py for printing and ploting the probability distribution.
+Both programs use the shor_helper.py for printing and plotting the probability distribution.
 
 ## 2. Qiskit code for IBM-Q demonstration  
 The qiskit codes consist of 2 files, corresponding to two quantum circuit implementation of Shor's algorithm for N=15 using 7 qubits and 5 qubits respectively:
@@ -31,6 +33,7 @@ The qiskit codes consist of 2 files, corresponding to two quantum circuit implem
 - ibm_q_shor_N15_a7_5q_qiskit.py
 
 Access to IBM Quantum hardware requires an authentication token. Users must retrieve their token from the IBM Quantum platform and update the MY_TOKEN variable accordingly.
+
 The two quantum circuits and respective measured outcomes on IBM-Q quantum computer are shown below.
 
 ### a) Quantum circuit implementation for Shor's period finding with N=15, a = 7, using 7 qubits
