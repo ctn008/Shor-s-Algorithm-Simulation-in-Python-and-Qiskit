@@ -37,16 +37,14 @@ Access to IBM Quantum hardware requires an authentication token. Users must retr
 The two quantum circuits and respective measured outcomes on IBM-Q quantum computer are shown below.
 
 ### a) Quantum circuit implementation for Shor's period finding with N=15, a = 7, using 7 qubits
-<img width="1374" height="427" alt="image" src="https://github.com/user-attachments/assets/f8b136b2-394c-4358-9ad2-a89f9d5374e9" />
 <div align="center">
   <img width="1547" height="622" alt="image" src="https://github.com/user-attachments/assets/2139b204-d5c4-48a9-813a-5482ec2edd21" />
-
   <img width="919" height="660" alt="image" src="https://github.com/user-attachments/assets/004c270d-0bf0-46e9-acc5-909f2b0bf4b4" />
 </div>
 
 ### b) Quantum circuit implementation for Shor's period finding with N=15, a = 4, using 5 qubits
 <div align="center">
-  <img width="1390" height="484" alt="image" src="https://github.com/user-attachments/assets/39584d0d-7c04-421c-85a2-9037de15a0e8" />
+  <img width="1242" height="712" alt="image" src="https://github.com/user-attachments/assets/e846c4c8-0404-490e-af2c-51cfb4f77130" />
   <img width="625" height="466" alt="image" src="https://github.com/user-attachments/assets/c9b928f9-4186-4952-984c-57d0071f7fc1" />
 </div>
 
